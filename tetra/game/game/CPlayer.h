@@ -17,7 +17,7 @@ public:
 
 private:
 	sf::Sprite PlayerSprite;
-	sf::Image PlayerImage;
+	sf::Texture PlayerImage;
 	bool isPlayerLoaded;
 	bool isPlayerOnScreen;
 };
