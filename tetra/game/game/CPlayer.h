@@ -18,6 +18,6 @@ public:
 private:
 	sf::Sprite PlayerSprite;
 	sf::Image PlayerImage;
-	bool IsPlayerLoaded;
+	bool isPlayerLoaded;
 	bool isPlayerOnScreen;
 };
