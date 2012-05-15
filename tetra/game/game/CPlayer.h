@@ -11,11 +11,11 @@ public:
 	void SetPlayerPosition(float x, float y);
 	void DrawPlayer(CWindow &window);
 
-	void sf::Vector2f GetPosition();
+	sf::Vector2f GetPosition();
 	
-	float GetInGameTime();
+	float GetInGameTime(CWindow &window);
 
-	bool IsPlayerOnScreen();
+	bool IsPlayerOnScreen;
 
 private:
 	sf::Sprite PlayerSprite;
