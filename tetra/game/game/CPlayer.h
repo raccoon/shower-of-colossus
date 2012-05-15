@@ -7,18 +7,17 @@ public:
 	CPlayer();
 	~CPlayer();
 
-	void SetPlayerImage(std::string filename);
-	void SetPlayerPosition(float x, float y);
-	void DrawPlayer(CWindow &window);
+	void setPlayerImage(std::string filename);
+	void setPlayerPosition(float x, float y);
+	void drawPlayer(CWindow &window);
 
-	sf::Vector2f GetPosition();
+	sf::Vector2f getPosition();
 	
-	float GetInGameTime(CWindow &window);
-
-	bool IsPlayerOnScreen;
+	float getInGameTime(CWindow &window);
 
 private:
 	sf::Sprite PlayerSprite;
 	sf::Image PlayerImage;
 	bool IsPlayerLoaded;
+	bool isPlayerOnScreen;
 };
