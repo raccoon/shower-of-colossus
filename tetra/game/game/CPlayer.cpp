@@ -3,49 +3,49 @@
 #include "CPlayer.h"
 #include "incs.h"
 
-void CPlayer::SetPlayerImage(std::string filename)
+void CPlayer::setPlayerImage(std::string filename)
 {
 	if(PlayerImage.LoadFromFile(filename) == false)
 	{
-		IsPlayerLoaded = false;
-		IsPlayerOnScreen = false;
+		isPlayerLoaded = false;
+		isPlayerOnScreen = false;
 	}
 	else
 	{
-		PlayerSprite.SetImage(PlayerImage);
-		IsPlayerLoaded = true;
-		IsPlayerOnScreen = true;
+		PlayerSprite.setImage(PlayerImage);
+		isPlayerLoaded = true;
+		isPlayerOnScreen = true;
 	}
 }
 
-void CPlayer::SetPlayerPosition(float x, float y)
+void CPlayer::setPlayerPosition(float x, float y)
 {
-	if(IsPlayerLoaded)
+	if(isPlayerLoaded)
 	{
-		PlayerSprite.SetPosition(x,y);
+		PlayerSprite.setPosition(x,y);
 	}
 }
 
-void CPlayer::DrawPlayer(CWindow &window)
+void CPlayer::drawPlayer(CWindow &window)
 {
-	if(IsPlayerLoaded)
+	if(isPlayerLoaded)
 	{
 		CWindow.Draw(PlayerSprite);
 	}
 }
 
-sf::Vector2f CPlayer::GetPosition()
+sf::Vector2f CPlayer::getPosition()
 {
-	if(IsPlayerLoaded)
+	if(isPlayerLoaded)
 	{
 		return PlayerSprite.GetPosition();
 	}
 	return sf::Vector2f();
 }
 
-float CPlayer::GetInGameTime(CWindow &window)
+float CPlayer::getInGameTime(CWindow &window)
 {
-	if(PlayerIsLoaded && PlayerIsOnScreen)
+	if(isPlayerLoaded && isPlayerOnScreen)
 	{
 		return window.GetFrameTime();
 	}
