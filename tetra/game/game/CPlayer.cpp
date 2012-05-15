@@ -45,7 +45,7 @@ sf::Vector2f CPlayer::GetPosition()
 
 float CPlayer::GetInGameTime(CWindow &window)
 {
-	if(PlayerIsLoaded)
+	if(PlayerIsLoaded && PlayerIsOnScreen)
 	{
 		return window.GetFrameTime();
 	}
